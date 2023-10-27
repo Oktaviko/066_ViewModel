@@ -95,10 +95,7 @@ fun TampilForm(cobaViewModel: CobaViewModel = viewModel()){
             Image(painterResource(id = R.drawable.baseline_arrow_back_24),
                 contentDescription = null,
                 modifier = Modifier)
-            Text(text = "Register",
-                textAlign = Alignment.Center,
-                modifier = Modifier.fillMaxWidth()
-            )
+
         }
     }
     OutlinedTextField(
@@ -167,10 +164,6 @@ fun TampilForm(cobaViewModel: CobaViewModel = viewModel()){
     Spacer(modifier = Modifier.height(100.dp))
     TextHasil(jenisnya = cobaViewModel.jenisKL, statusnya = cobaViewModel.statusM, alamatnya =cobaViewModel.alamat , emailnya = cobaViewModel.email )
     //TextHasil(jenisnya = cobaViewModel.jenisKL, statusnya = cobaViewModel.statusM, alamatnya = cobaViewModel.alamat, emailnya = cobaViewModel.email)
-}
-
-fun Text(text: String, textAlign: Alignment, modifier: Modifier) {
-
 }
 
 @Composable
