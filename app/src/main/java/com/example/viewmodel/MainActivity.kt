@@ -95,9 +95,9 @@ fun TampilForm(cobaViewModel: CobaViewModel = viewModel()){
             Image(painterResource(id = R.drawable.baseline_arrow_back_24),
                 contentDescription = null,
                 modifier = Modifier)
-
         }
     }
+
     OutlinedTextField(
         value = textNama,
         singleLine = true,
@@ -151,7 +151,8 @@ fun TampilForm(cobaViewModel: CobaViewModel = viewModel()){
     Button(
         modifier = Modifier.fillMaxWidth(),
         onClick = {
-            cobaViewModel.insertData(textNama, textTlp, dataForm.sex, textemail, dataForm.status, textAmt)
+            cobaViewModel.insertData(textNama, textTlp, dataForm.sex, textAmt
+                , dataForm.status, textemail)
         }
     )
 
@@ -161,7 +162,7 @@ fun TampilForm(cobaViewModel: CobaViewModel = viewModel()){
             fontSize = 16.sp
         )
     }
-    Spacer(modifier = Modifier.height(100.dp))
+    Spacer(modifier = Modifier.height(10.dp))
     TextHasil(jenisnya = cobaViewModel.jenisKL, statusnya = cobaViewModel.statusM, alamatnya =cobaViewModel.alamat , emailnya = cobaViewModel.email )
     //TextHasil(jenisnya = cobaViewModel.jenisKL, statusnya = cobaViewModel.statusM, alamatnya = cobaViewModel.alamat, emailnya = cobaViewModel.email)
 }
